@@ -1,0 +1,10 @@
+.gradle
+.claude/
+.kotlin/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.idea/
+.classpath
+nbproject/
+.vscode/
+.DS_Store

@@ -1,0 +1,33 @@
+### Scenario: Password policies
+password:
+  length:
+    min: 8
+    max: 64
+  entropy-threshold: 19
+  allow-spaces: true
+  require-digit: 1
+  require-special: 1
+
+### Jackson data-binding and (De)Serialization
+spring:
+  jackson:
+    # Force english
+    locale: en
+    # Default to UTC + display TZ
+    time-zone: UTC
+    datatype:
+      datetime:
+        write-dates-with-zone-id: true
+    # Default to snake case
+    property-naming-strategy: SNAKE_CASE
+    # Hardening
+    deserialization:
+      fail-on-ignored-properties: true
+
+### Debugging
+# Set log-level debug for all Spring packages
+#debug: true
+# Global log level of our web application
+logging:
+  level:
+    equisign: DEBUG
